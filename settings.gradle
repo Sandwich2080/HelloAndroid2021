@@ -1,0 +1,2 @@
+rootProject.name = "HelloAndroid2021"
+include ':app'
