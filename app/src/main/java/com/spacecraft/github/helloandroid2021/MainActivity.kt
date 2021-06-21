@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
+import com.spacecraft.github.helloandroid2021.data.User
 import com.spacecraft.github.helloandroid2021.databinding.ActivityMainBinding
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var user:User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,12 +20,16 @@ class MainActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             updateTextContent()
         }
+
+        user = User("zhang","xiaozhang")
+        binding.user = user
     }
 
     private fun updateTextContent() {
         binding.apply {
             tvWelcome.text = randomText()
-
+            user?.nickname = randomText()
+            invalidateAll()
         }
     }
 
