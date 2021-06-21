@@ -29,6 +29,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    //DSL element 'android.dataBinding.enabled' is obsolete and has been replaced with 'android.buildFeatures.dataBinding'.
+    //It will be removed in version 7.0 of the Android Gradle plugin.
+    /*dataBinding{
+        enabled = true
+    }*/
+
+    buildFeatures{
+        dataBinding = true
+    }
+
+
 }
 
 dependencies {
