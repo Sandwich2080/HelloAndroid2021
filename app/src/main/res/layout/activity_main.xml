@@ -45,5 +45,16 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
 
+        <Button
+            android:id="@+id/btn_flutter_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Flutter Activity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

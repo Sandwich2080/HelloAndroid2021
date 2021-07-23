@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.spacecraft.github.helloandroid2021.data.User
 import com.spacecraft.github.helloandroid2021.databinding.ActivityMainBinding
+import io.flutter.embedding.android.FlutterActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.btnLogin.setOnClickListener {
             updateTextContent()
+        }
+
+        binding.btnFlutterAct.setOnClickListener {
+            startActivity(FlutterActivity.createDefaultIntent(this))
         }
 
         user = User("zhang","xiaozhang")
